@@ -1,22 +1,19 @@
-{% load  static %}
-
-<!DOCTYPE html>
-<html lang="fr-FR" dir="ltr">
-    <head>
-        <meta charset="utf-8"/>
-        <title>ArtRoom</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
-        >
-        <link 
-            rel="stylesheet" 
-            href="{% static 'core/css/core.css'%}"
-        >
-    </head>
-    <body>
-        <main class="landing-main">
-            <h1 class="title">ArtRoom</h1>
-        </main>
-    </body>
-</html>
+{% extends 'mysite/base.html'%}
+{% load static %}
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
+{% endblock %}
+{% block content %}
+    <main id="landing-main" class="artroom-main landing__main">
+        <figure id="landing-logo-figure" class="logo-figure show-up-1-5-s">
+            <img 
+            
+                src="{% static 'core/images/green-logo.webp'%}" 
+                alt="Logo de l'application ArtRoom"
+            />
+        </figure>
+    </main>
+{% endblock %}
+{% block js%}
+    <script src="{% static 'core/js/landing.js'%}"></script>
+{% endblock %}  

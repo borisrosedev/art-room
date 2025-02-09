@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>ArtRoom</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        >
+        <link rel="stylesheet" href="{% static 'mysite/css/global.css'%}"/>
+        {% block extrastyle %}{% endblock %}   
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+        {% block js%}{% endblock %}
+    </body>
+</html>

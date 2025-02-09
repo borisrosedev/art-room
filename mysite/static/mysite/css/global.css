@@ -1,0 +1,68 @@
+.artroom-main {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 15vh;
+
+}
+
+
+.show-up-1-5-s {
+    opacity: 0;
+    animation: show-up 1.5s ease-in forwards;
+}
+
+
+.show-up-higher-1-5-s {
+    opacity: 1;
+    animation: show-up-higher 1.5s ease-in forwards;
+}
+
+
+
+.show-down-1-5-s {
+    opacity: 1;
+    animation: show-down 1.5s ease-in forwards;
+}
+
+
+@keyframes show-up-higher {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-600px);
+    }
+
+}
+
+
+
+@keyframes show-up {
+    from {
+        opacity: 0;
+        transform: translateY(600px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes show-down {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(600px);
+    }
+
+}

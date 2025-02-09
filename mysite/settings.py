@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     "/var/www/static/",
+    BASE_DIR / "mysite/static"
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / "mysite/templates"
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
